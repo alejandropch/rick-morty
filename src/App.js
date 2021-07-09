@@ -1,20 +1,27 @@
 
-import React,{useContext} from 'react'
+import React,{useState,useContext} from 'react'
 
 import ThemeContext from './context/ThemeContext'
 import Header from './components/Header'
 import Characters from './components/Characters'
 
 function App() {
-  const mode=useContext(ThemeContext)
-  console.log(mode)
+
+const [updateMode,setUpdateMode]= useState('light-mode')
+
   
 
+
+
   return (
-    <div className={mode}>
-     <Header />
+  <ThemeContext.Provider value={{updateMode,setUpdateMode}} >
+
+    <div className={updateMode}>
+     <Header/>
      <Characters />
     </div>
+    </ThemeContext.Provider>
+
   );
 }
 
