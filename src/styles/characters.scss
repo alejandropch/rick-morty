@@ -1,0 +1,9 @@
+
+.container{
+  display: flex;
+  flex-flow:wrap;
+  &__tarjeta {
+    flex-direction:column;
+    
+    }
+}

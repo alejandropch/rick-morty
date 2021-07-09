@@ -1,10 +1,15 @@
-.tarjeta {
-display:flex;
-flex-wrap: wrap;
-flex-direction:column;
-
-}
-.container{
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow:wrap;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
 }
+
+.container__tarjeta {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=characters.css.map */
