@@ -1,5 +1,8 @@
 import React,{useState, useContext} from 'react'
 import ThemeContext from '../context/ThemeContext'
+
+import '../styles/header.css'
+
 export default function Header() {
 
     const [darkMode,setDarkMode]= useState(false)
@@ -12,7 +15,7 @@ export default function Header() {
     const handleClick=()=>{
 
         setDarkMode(!darkMode)
-        updateMode==='light-mode'?setUpdateMode('dark-mode'):setUpdateMode('light-mode')
+        updateMode==='dark-mode'?setUpdateMode('light-mode'):setUpdateMode('dark-mode')
       }
 
 const color=useContext(ThemeContext)    
@@ -20,9 +23,10 @@ const color=useContext(ThemeContext)
 
 
     return (
-        <div className="Header">
-            <h1 style={{color}}>React Hooks baby</h1>
-            <button type="button" onClick={handleClick}>{darkMode? "Dark Mode Baby":"Boring Light Mode "}</button>
+        <div className=" Header">
+            
+            <h1 className="Header__title" style={{color}}>React Hooks baby</h1>
+            <button className={updateMode+" Header__button"} type="button" onClick={handleClick}>{darkMode? "Boring Light Mode":"Dark Mode Baby"}</button>
             
         </div>
     )

@@ -20,14 +20,16 @@ fetch('https://rickandmortyapi.com/api/character')
 
     return ( 
     
-        <div className="container">
+    <div className="container">
       
-            {character.map(character=>(
+        {character.map(character=>(
             
-         <div className="container__tarjeta">
-             <h2 className="container__tarjeta--name">{character.name}</h2>
-             <img className="container__tarjeta--img"src={character.image}/> 
-        </div>
+            <div className="container__tarjeta" key={character.id}>
+        
+                <h2 className="container__tarjeta--name">{character.name}</h2>
+        
+                <img className="container__tarjeta--img"src={character.image}/> 
+            </div>
              
             ))
             }

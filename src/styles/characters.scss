@@ -2,8 +2,17 @@
 .container{
   display: flex;
   flex-flow:wrap;
+  justify-content: center;
   &__tarjeta {
+    @extend .container;
     flex-direction:column;
-    
+    align-items:center;
+    margin: 10px 20px;
+    border-radius: 200px;
+
+  
+    &--img{
+      border-radius:2px;
+    }
     }
 }

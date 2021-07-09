@@ -1,5 +1,6 @@
 
 import React,{useState,useContext} from 'react'
+import './styles/index.css';
 
 import ThemeContext from './context/ThemeContext'
 import Header from './components/Header'
@@ -16,7 +17,7 @@ const [updateMode,setUpdateMode]= useState('light-mode')
   return (
   <ThemeContext.Provider value={{updateMode,setUpdateMode}} >
 
-    <div className={updateMode}>
+    <div className={updateMode + " page"}>
      <Header/>
      <Characters />
     </div>
