@@ -21,6 +21,9 @@ const reducerCreated=(state,action) => {
 
             return {
                 ...state,
+                    // the first value is going to add all the 
+                    // characters that you already have, and the second 
+                    // one will add a new one
                     allFavorites: [...state.allFavorites, action.payLoad]
             }
         
@@ -50,7 +53,6 @@ fetch('https://rickandmortyapi.com/api/character')
 
 function handleClick(favorite){
     dispatch({type:'FAVORITE_CHARACTER',payLoad:favorite})
-    console.log({favorite})
 }
 
 
@@ -61,7 +63,7 @@ function handleClick(favorite){
     <div className="container">
       {
 
-        // favorite.favorite.map(favoriteCharacter=>console.log(favoriteCharacter.name))
+        favorite.allFavorites.map(favoriteCharacter=><li>{favoriteCharacter.name}</li>)
 
       }
         {character.map(character=>(
