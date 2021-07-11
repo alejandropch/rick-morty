@@ -7,10 +7,10 @@ export default function Characters() {
     
     
 
-const [character,setCharacter]=useState([])
+const initialState ={
 
-const initialState =[]
-
+    allFavorites: []
+}
 
 
 const reducerCreated=(state,action) => {
@@ -20,8 +20,8 @@ const reducerCreated=(state,action) => {
         case 'FAVORITE_CHARACTER':
 
             return {
-                ...state,allFavorites:
-                            [...state.favorite, action.payLoad]
+                ...state,
+                    allFavorites: [...state.allFavorites, action.payLoad]
             }
         
             default: 
@@ -29,6 +29,11 @@ const reducerCreated=(state,action) => {
     }
 
 }
+
+ 
+const [character,setCharacter]=useState([])
+
+
 
 const [favorite,dispatch]=useReducer(reducerCreated,initialState)
 
@@ -54,7 +59,11 @@ function handleClick(favorite){
     return ( 
     
     <div className="container">
-      
+      {
+
+        // favorite.favorite.map(favoriteCharacter=>console.log(favoriteCharacter.name))
+
+      }
         {character.map(character=>(
             
             <div onClick={()=>handleClick(character)}className="container__tarjeta" key={character.id}>
