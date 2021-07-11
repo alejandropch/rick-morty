@@ -16,8 +16,8 @@ body {
   -webkit-transition: background-color 1s ease 0s;
   transition: background-color 1s ease 0s;
   background-color: #0f0f0f;
-  -webkit-transition: border 1.6s linear 0s;
-  transition: border 1.6s linear 0s;
+  -webkit-transition: background-color 0.5s linear 0s;
+  transition: background-color 0.5s linear 0s;
   color: #ffffff;
   text-shadow: 0px 3px 7px #7ddf7a;
 }
@@ -25,8 +25,8 @@ body {
 .light-mode {
   -webkit-transition: background-color 1s ease 0s;
   transition: background-color 1s ease 0s;
-  -webkit-transition: border 1.6s linear 0s;
-  transition: border 1.6s linear 0s;
+  -webkit-transition: background-color 0.5s linear 0s;
+  transition: background-color 0.5s linear 0s;
   background-color: #fff;
   color: black;
 }
