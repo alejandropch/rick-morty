@@ -52,6 +52,7 @@ fetch('https://rickandmortyapi.com/api/character')
 
 
 function handleClick(favorite){
+    console.log(favorite)
     dispatch({type:'FAVORITE_CHARACTER',payLoad:favorite})
 }
 
@@ -59,13 +60,15 @@ function handleClick(favorite){
 
 
     return ( 
-    
+        <React.Fragment>
+          
     <div className="container">
-      {
+        <div className="favorite">
+                
+            {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="favorite__characters" src={favoriteCharacter.image} />)
+            }
 
-        favorite.allFavorites.map(favoriteCharacter=><li>{favoriteCharacter.name}</li>)
-
-      }
+            </div>
         {character.map(character=>(
             
             <div onClick={()=>handleClick(character)}className="container__tarjeta" key={character.id}>
@@ -79,5 +82,6 @@ function handleClick(favorite){
             }
 
 </div>
+</React.Fragment>
     )
 }

@@ -1,6 +1,7 @@
 
 .container{
   display: flex;
+  flex-direction: column;
   flex-flow:wrap;
   justify-content: center;
   &__tarjeta {
@@ -16,3 +17,20 @@
     }
     }
 }
+
+
+.favorite{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height:50px;
+  width: 90vw;
+  
+  &__characters{
+  aspect-ratio: 1;
+  border-radius: 100%;
+  width:50px;
+  height:50px;
+
+}}
