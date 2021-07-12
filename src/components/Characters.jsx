@@ -1,4 +1,4 @@
-import React ,{ useState, useEffect,useReducer} from 'react'
+import React ,{ useState, useEffect,useReducer,useMemo} from 'react'
 
 import '../styles/characters.css'
 
@@ -63,11 +63,20 @@ export default function Characters() {
 
     }
 
-    const characterFilter=character.filter((character)=>{
+    // const characterFilter=character.filter((character)=>{
 
-                    return character.name.toLowerCase().includes(search.toLowerCase())
-    })
+    //                 return character.name.toLowerCase().includes(search.toLowerCase())
+    // })
 
+
+    const characterFilter=useMemo(()=>
+      
+      character.filter((character)=>{
+
+            return character.name.toLowerCase().includes(search.toLowerCase())
+            
+        })
+    ,[character,search])
 
 
     return ( 
