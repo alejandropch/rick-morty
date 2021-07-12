@@ -1,4 +1,4 @@
-import React ,{ useState, useEffect,useReducer,useMemo,useRef} from 'react'
+import React ,{ useState, useEffect,useReducer,useMemo,useRef, useCallback} from 'react'
 
 import '../styles/characters.css'
 import Search from './Search'
@@ -40,11 +40,11 @@ export default function Characters() {
 
     useEffect(()=>{
 
-    fetch('https://rickandmortyapi.com/api/character')
-    .then(responce=>responce.json())
-        .then(data=>setCharacter(data.results))
+        fetch('https://rickandmortyapi.com/api/character')
+        .then(responce=>responce.json())
+            .then(data=>setCharacter(data.results))
 
-    //when there is not nothing to listen, it will render once
+       //when there is not nothing to listen, it will render once
     },[])
 
 
@@ -53,17 +53,25 @@ export default function Characters() {
     }
 
 
-    const handleSearch=()=>{
+    // const handleSearch=()=>{
+
+    //     setSearch(searchInput.current.value)
+
+    // }
+
+    const handleSearch=useCallback(()=>{
 
         setSearch(searchInput.current.value)
 
-    }
+        // in this case we dont need no listen an element   
+    },[])
+
+
 
     // const characterFilter=character.filter((character)=>{
 
     //                 return character.name.toLowerCase().includes(search.toLowerCase())
     // })
-
 
     const characterFilter=useMemo(()=>
       
