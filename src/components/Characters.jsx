@@ -53,7 +53,7 @@ export default function Characters() {
     }
 
 
-    const handleChange=()=>{
+    const handleSearch=()=>{
 
         setSearch(searchInput.current.value)
 
@@ -81,7 +81,7 @@ export default function Characters() {
     <div className="container">
 
         <div className="container__search">
-            <input type="text" onChange={handleChange} ref={searchInput} value={search}></input>
+            <input type="text" onChange={handleSearch} ref={searchInput} value={search}></input>
 
         </div>
 
