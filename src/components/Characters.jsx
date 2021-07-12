@@ -1,7 +1,7 @@
 import React ,{ useState, useEffect,useReducer,useMemo,useRef} from 'react'
 
 import '../styles/characters.css'
-
+import Search from './Search'
 
 export default function Characters() {
     
@@ -80,11 +80,8 @@ export default function Characters() {
           
     <div className="container">
 
-        <div className="container__search">
-            <input type="text" onChange={handleSearch} ref={searchInput} value={search}></input>
-
-        </div>
-
+       
+        <Search handleSearch={handleSearch} searchInput={searchInput} search={search}/>
 
 
         <div className="container__favorite">
