@@ -72,7 +72,7 @@
           justify-content: space-evenly;
 }
 
-.favorite {
+.container__favorite {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +89,7 @@
   width: 90vw;
 }
 
-.favorite__characters {
+.container__favorite--characters {
   aspect-ratio: 1;
   border-radius: 100%;
   width: 50px;
