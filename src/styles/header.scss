@@ -12,25 +12,21 @@
     flex-direction: column;
 display: flex;
 align-items: center;
+
 }
-.Header__button:hover {
+
+.dark-mode .Header__button:hover {
 
     animation:jump 0.5s ease 0s 1 normal;
    
 }
-@keyframes jump{
-    0%{ transform:translateY(0); }
-    20%{ transform:translateY(0); }
-    40%{ transform:translateY(-12px); }
-    50%{ transform:translateY(0); }
-    60%{ transform:translateY(-5px); }
-    80%{ transform:translateY(0); }
-    100%{ transform:translateY(0); }
-    }
+
 
     .light-mode .Header__button{
   transition:color 0.3s linear 0s;
-
+  animation:jumpInfinite 0.5s ease 0s infinite normal;
+  animation-delay: 3s;
+  animation-duration: 3s;
     background-color: #f5ca0b;
 }
 
@@ -44,8 +40,23 @@ align-items: center;
 
    
 }
+@keyframes jumpInfinite{
+    0%{ transform:translateY(0); }
+    2%,4%{ transform:translateY(-12px); }
+    6%{ transform:translateY(0); }
+    8%{ transform:translateY(-5px); }
+    10%{ transform:translateY(0); }
 
-  
+    }
+    @keyframes jump{
+0%{ transform:translateY(0); }
+20%{ transform:translateY(0); }
+40%{ transform:translateY(-11px); }
+50%{ transform:translateY(0); }
+60%{ transform:translateY(-5px); }
+80%{ transform:translateY(0); }
+100%{ transform:translateY(0); }
+}
    
     @keyframes change-color {
     0%{ background-color: #f5ca0b; }
