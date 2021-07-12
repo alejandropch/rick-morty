@@ -63,7 +63,11 @@ export default function Characters() {
 
     }
 
-    
+    const characterFilter=character.filter((character)=>{
+
+                    return character.name.toLowerCase().includes(search.toLowerCase())
+    })
+
 
 
     return ( 
@@ -84,7 +88,7 @@ export default function Characters() {
             }
 
         </div>
-        {character.map(character=>(
+        {characterFilter.map(character=>(
             
            <div onClick={()=>handleClick(character)}className="container__tarjeta" key={character.id}>
         
