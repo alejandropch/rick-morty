@@ -68,14 +68,27 @@ function handleClick(favorite){
             {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="favorite__characters" src={favoriteCharacter.image} />)
             }
 
-            </div>
+        </div>
         {character.map(character=>(
             
-            <div onClick={()=>handleClick(character)}className="container__tarjeta" key={character.id}>
+           <div onClick={()=>handleClick(character)}className="container__tarjeta" key={character.id}>
         
                 <h2 className="container__tarjeta--name">{character.name}</h2>
-        
-                <img className="container__tarjeta--img"src={ character.image}/> 
+                <div className="container__tarjeta--subInfo">
+
+
+                    <div className="subInfo__wall">
+                    
+                        <li>Gender:{character.gender}</li>
+                        <li>Status: {character.status}</li>
+                        <li>Specie: {character.species}</li>
+                
+                    </div>
+                    <div className="subInfo__img--container">
+                    <img className="subInfo__img"src={ character.image} /> 
+                    </div>
+                </div>
+
             </div>
              
             ))

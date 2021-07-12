@@ -25,8 +25,51 @@
   border-radius: 200px;
 }
 
-.container__tarjeta--img {
+.container__tarjeta--subInfo {
+  list-style: none;
+  overflow: hidden;
+}
+
+.container__tarjeta--subInfo .subInfo__wall {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+.container__tarjeta--subInfo .subInfo__img--container {
+  width: 300px;
+  height: 300px;
+}
+
+.container__tarjeta--subInfo .subInfo__img {
+  position: relative;
   border-radius: 2px;
+  -webkit-animation: slideInDown 2s both;
+          animation: slideInDown 2s both;
+  z-index: 0;
+}
+
+.container__tarjeta--subInfo:hover .subInfo__wall {
+  -webkit-animation-name: slideInInfoDown;
+          animation-name: slideInInfoDown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .favorite {
@@ -51,5 +94,53 @@
   border-radius: 100%;
   width: 50px;
   height: 50px;
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideInInfoDown {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideInInfoDown {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
 }
 /*# sourceMappingURL=characters.css.map */
