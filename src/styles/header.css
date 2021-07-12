@@ -122,6 +122,8 @@
   border-width: 0px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transition: background-color 0.05s linear 0s;
+  transition: background-color 0.05s linear 0s;
 }
 
 .Header {
@@ -137,14 +139,12 @@
           align-items: center;
 }
 
-.dark-mode .Header__button:hover {
+.dark-mode .Header__button:hover, .dark-mode .Header__button:active {
   -webkit-animation: jump 0.5s ease 0s 1 normal;
           animation: jump 0.5s ease 0s 1 normal;
 }
 
 .light-mode .Header__button {
-  -webkit-transition: color 0.3s linear 0s;
-  transition: color 0.3s linear 0s;
   -webkit-animation: jumpInfinite 0.5s ease 0s infinite normal;
           animation: jumpInfinite 0.5s ease 0s infinite normal;
   -webkit-animation-delay: 3s;
@@ -155,10 +155,6 @@
 }
 
 .dark-mode .Header__button {
-  -webkit-animation: change-color 1s ease 0s 1 normal;
-          animation: change-color 1s ease 0s 1 normal;
-  -webkit-transition: border 1s linear 0s;
-  transition: border 1s linear 0s;
   border: solid 2px #7ddf7a;
   border-top: 0px;
   background-color: #0daec3;
@@ -273,7 +269,7 @@
   }
 }
 
-@-webkit-keyframes change-color {
+@-webkit-keyframes change-light-dark {
   0% {
     background-color: #f5ca0b;
   }
@@ -282,12 +278,30 @@
   }
 }
 
-@keyframes change-color {
+@keyframes change-light-dark {
   0% {
     background-color: #f5ca0b;
   }
   100% {
     background-color: #0daec3;
+  }
+}
+
+@-webkit-keyframes change-dark-light {
+  0% {
+    background-color: #0daec3;
+  }
+  100% {
+    background-color: #f5ca0b;
+  }
+}
+
+@keyframes change-dark-light {
+  0% {
+    background-color: #0daec3;
+  }
+  100% {
+    background-color: #f5ca0b;
   }
 }
 /*# sourceMappingURL=header.css.map */
