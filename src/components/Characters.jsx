@@ -1,5 +1,6 @@
-import React ,{ useState, useEffect,useReducer,useMemo,useRef, useCallback} from 'react'
+import React ,{ useState,useReducer,useMemo,useRef, useCallback} from 'react'
 
+import useCharacter from '../hooks/useCharacter'
 import '../styles/characters.css'
 import Search from './Search'
 
@@ -33,19 +34,10 @@ export default function Characters() {
     }
 
 
-    const [character,setCharacter]=useState([])
     const [search, setSearch]=useState('')
     const [favorite,dispatch]=useReducer(reducerCreated,initialState)
     const searchInput=useRef(null)
 
-    useEffect(()=>{
-
-        fetch('https://rickandmortyapi.com/api/character')
-        .then(responce=>responce.json())
-            .then(data=>setCharacter(data.results))
-
-       //when there is not nothing to listen, it will render once
-    },[])
 
 
     function handleClick(favorite){
@@ -53,11 +45,7 @@ export default function Characters() {
     }
 
 
-    // const handleSearch=()=>{
-
-    //     setSearch(searchInput.current.value)
-
-    // }
+  
 
     const handleSearch=useCallback(()=>{
 
@@ -73,14 +61,18 @@ export default function Characters() {
     //                 return character.name.toLowerCase().includes(search.toLowerCase())
     // })
 
+    const API='https://rickandmortyapi.com/api/character'
+    const characters=useCharacter(API)
+
+
     const characterFilter=useMemo(()=>
       
-      character.filter((character)=>{
+      characters.filter((character)=>{
 
             return character.name.toLowerCase().includes(search.toLowerCase())
             
         })
-    ,[character,search])
+    ,[characters,search])
 
 
     return ( 
