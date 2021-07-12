@@ -40,5 +40,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=index.css.map */

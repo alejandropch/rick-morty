@@ -88,12 +88,13 @@ export default function Characters() {
             }
 
         </div>
+        <div className="container__cards">
         {characterFilter.map(character=>(
             
-           <div onClick={()=>handleClick(character)}className="container__tarjeta" key={character.id}>
+           <div onClick={()=>handleClick(character)}className="container__card" key={character.id}>
         
-                <h2 className="container__tarjeta--name">{character.name}</h2>
-                <div className="container__tarjeta--subInfo">
+                <h2 className="container__card--name">{character.name}</h2>
+                <div className="container__card--subInfo">
 
 
                     <div className="subInfo__wall">
@@ -109,9 +110,10 @@ export default function Characters() {
                 </div>
 
             </div>
-             
             ))
-            }
+           }
+        </div> 
+
 
 </div>
 </React.Fragment>

@@ -1,4 +1,4 @@
-.container, .container__tarjeta {
+.container, .container__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +13,35 @@
           justify-content: center;
 }
 
-.container__tarjeta {
+.container__cards {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__search input {
+  width: 200px;
+}
+
+.container__card {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -25,11 +53,11 @@
   border-radius: 200px;
 }
 
-.container__tarjeta--subInfo {
+.container__card--subInfo {
   list-style: none;
 }
 
-.container__tarjeta--subInfo .subInfo__wall {
+.container__card--subInfo .subInfo__wall {
   position: absolute;
   display: none;
   z-index: 1;
@@ -41,12 +69,12 @@
   font-weight: 500;
 }
 
-.container__tarjeta--subInfo .subInfo__img--container {
+.container__card--subInfo .subInfo__img--container {
   width: 300px;
   height: 300px;
 }
 
-.container__tarjeta--subInfo .subInfo__img {
+.container__card--subInfo .subInfo__img {
   position: relative;
   border-radius: 2px;
   -webkit-animation: fadeIn 0.5s both;
@@ -54,7 +82,7 @@
   z-index: 0;
 }
 
-.container__tarjeta--subInfo:hover .subInfo__wall {
+.container__card--subInfo:hover .subInfo__wall {
   -webkit-animation: fadeIn 0.5s both;
           animation: fadeIn 0.5s both;
   display: -webkit-box;
@@ -73,6 +101,7 @@
 }
 
 .container__favorite {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

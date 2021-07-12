@@ -4,8 +4,21 @@
   flex-direction: column;
   flex-flow:wrap;
   justify-content: center;
+  &__cards{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__search{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    input{
+      width: 200px;
 
-  &__tarjeta {
+    }
+  }
+  &__card {
     @extend .container;
     flex-direction:column;
     align-items:center;
@@ -61,6 +74,7 @@
   }
 
   &__favorite{
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: row;
