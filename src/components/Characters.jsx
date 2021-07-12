@@ -1,18 +1,11 @@
-import React ,{ useState, useEffect,useReducer,useMemo} from 'react'
+import React ,{ useState, useEffect,useReducer,useMemo,useRef} from 'react'
 
 import '../styles/characters.css'
 
 
 export default function Characters() {
     
-    const [character,setCharacter]=useState([])
-    const [search, setSearch]=useState('')
-
-
-    const initialState ={
-
-        allFavorites: []
-    }
+   
 
 
     const reducerCreated=(state,action) => {
@@ -32,14 +25,18 @@ export default function Characters() {
                 default: 
                     return state
         }
-
     }
 
- 
+    const initialState ={
+
+        allFavorites: []
+    }
 
 
+    const [character,setCharacter]=useState([])
+    const [search, setSearch]=useState('')
     const [favorite,dispatch]=useReducer(reducerCreated,initialState)
-
+    const searchInput=useRef(null)
 
     useEffect(()=>{
 
@@ -56,10 +53,9 @@ export default function Characters() {
     }
 
 
-    const handleChange=(e)=>{
+    const handleChange=()=>{
 
-        setSearch(e.target.value)
-        console.log(e)
+        setSearch(searchInput.current.value)
 
     }
 
@@ -85,7 +81,7 @@ export default function Characters() {
     <div className="container">
 
         <div className="container__search">
-            <input type="text" onChange={handleChange} value={search}></input>
+            <input type="text" onChange={handleChange} ref={searchInput} value={search}></input>
 
         </div>
 
