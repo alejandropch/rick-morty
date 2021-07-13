@@ -71,6 +71,12 @@ export default function Characters() {
         })
     ,[characters,search])
 
+    function hola(){
+        console.log(favorite.allFavorites.length)
+        if(favorite.allFavorites.length===0)console.log("fsdf")
+        else{console.log("no")}
+    }
+
     return ( 
    <React.Fragment>
           
@@ -81,6 +87,9 @@ export default function Characters() {
 
         <div className="container__favorite">
                 
+            {(favorite.allFavorites.length ===0)? <i> Select your favorite character </i>:  <i> :)</i>}
+
+            
             {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="container__favorite--characters" src={favoriteCharacter.image} />)}
 
         </div>
