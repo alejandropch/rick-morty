@@ -78,9 +78,7 @@ export default function Characters() {
    <React.Fragment>
           
     <div className="container">
-   <div className="container__button" > 
         <ButtonChange />
-        </div>
         <Search handleSearch={handleSearch} searchInput={searchInput} search={search}/>
 
 

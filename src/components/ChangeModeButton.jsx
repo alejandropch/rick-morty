@@ -1,6 +1,7 @@
 import React,{useState, useContext} from 'react'
 import ThemeContext from '../context/ThemeContext'
 
+import '../styles/changeModeButton.css'
 
 
 
@@ -23,6 +24,10 @@ export default function ChangeModeButton() {
 
   
     return (
+   <div className="container__button" > 
+
              <button className={updateMode+" Header__button"} type="button" onClick={handleClickStateMode}>{darkMode? "Boring Light Mode":"Dark Mode Baby"}</button>
+        </div>
+
     )
 }
