@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/alejandropch/rick-mortystatic/css/main.598c7144.chunk.css",
+    "main.js": "/alejandropch/rick-mortystatic/js/main.8b5c6fad.chunk.js",
+    "main.js.map": "/alejandropch/rick-mortystatic/js/main.8b5c6fad.chunk.js.map",
+    "runtime-main.js": "/alejandropch/rick-mortystatic/js/runtime-main.e6ec6dfb.js",
+    "runtime-main.js.map": "/alejandropch/rick-mortystatic/js/runtime-main.e6ec6dfb.js.map",
+    "static/js/2.872cd5e6.chunk.js": "/alejandropch/rick-mortystatic/js/2.872cd5e6.chunk.js",
+    "static/js/2.872cd5e6.chunk.js.map": "/alejandropch/rick-mortystatic/js/2.872cd5e6.chunk.js.map",
+    "static/js/3.4e539c8b.chunk.js": "/alejandropch/rick-mortystatic/js/3.4e539c8b.chunk.js",
+    "static/js/3.4e539c8b.chunk.js.map": "/alejandropch/rick-mortystatic/js/3.4e539c8b.chunk.js.map",
+    "index.html": "/alejandropch/rick-mortyindex.html",
+    "static/css/main.598c7144.chunk.css.map": "/alejandropch/rick-mortystatic/css/main.598c7144.chunk.css.map",
+    "static/js/2.872cd5e6.chunk.js.LICENSE.txt": "/alejandropch/rick-mortystatic/js/2.872cd5e6.chunk.js.LICENSE.txt",
+    "static/media/characters.css": "/alejandropch/rick-mortystatic/media/heart.fb824694.svg",
+    "static/media/header.css": "/alejandropch/rick-mortystatic/media/rickandmorty.6c4de5b5.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6ec6dfb.js",
+    "static/js/2.872cd5e6.chunk.js",
+    "static/css/main.598c7144.chunk.css",
+    "static/js/main.8b5c6fad.chunk.js"
+  ]
+}
