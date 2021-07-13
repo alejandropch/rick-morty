@@ -25,7 +25,7 @@ const color=useContext(ThemeContext)
     return (
         <div className=" Header">
             
-            <h1 className="Header__title" style={{color}}>React Hooks baby</h1>
+            <h1 className="Header__title" style={{color}}>The Rick & Morty API</h1>
             <button className={updateMode+" Header__button"} type="button" onClick={handleClick}>{darkMode? "Boring Light Mode":"Dark Mode Baby"}</button>
             
         </div>

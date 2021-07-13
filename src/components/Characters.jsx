@@ -6,7 +6,6 @@ import Search from './Search'
 
 export default function Characters() {
     
-   
 
 
     const reducerCreated=(state,action) => {
@@ -32,13 +31,14 @@ export default function Characters() {
 
         allFavorites: []
     }
+   
 
 
     const [search, setSearch]=useState('')
     const [favorite,dispatch]=useReducer(reducerCreated,initialState)
     const searchInput=useRef(null)
 
-
+   
 
     function handleClick(favorite){
         dispatch({type:'FAVORITE_CHARACTER',payLoad:favorite})
@@ -55,15 +55,10 @@ export default function Characters() {
     },[])
 
 
-
-    // const characterFilter=character.filter((character)=>{
-
-    //                 return character.name.toLowerCase().includes(search.toLowerCase())
-    // })
-
-    const API='https://rickandmortyapi.com/api/character'
+    const API=`https://rickandmortyapi.com/api/character/`
     const characters=useCharacter(API)
-
+            
+    
 
     const characterFilter=useMemo(()=>
       
@@ -74,25 +69,22 @@ export default function Characters() {
         })
     ,[characters,search])
 
-
     return ( 
-        <React.Fragment>
+   <React.Fragment>
           
     <div className="container">
 
-       
         <Search handleSearch={handleSearch} searchInput={searchInput} search={search}/>
 
 
         <div className="container__favorite">
                 
-            {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="container__favorite--characters" src={favoriteCharacter.image} />)
-            }
+            {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="container__favorite--characters" src={favoriteCharacter.image} />)}
 
         </div>
         <div className="container__cards">
+        
         {characterFilter.map(character=>(
-            
            <div onClick={()=>handleClick(character)}className="container__card" key={character.id}>
         
                 <h2 className="container__card--name">{character.name}</h2>
@@ -110,14 +102,13 @@ export default function Characters() {
                     <img className="subInfo__img"src={ character.image} /> 
                     </div>
                 </div>
-
             </div>
             ))
-           }
+         }
+
         </div> 
 
-
-</div>
-</React.Fragment>
+    </div>
+    </React.Fragment>
     )
 }

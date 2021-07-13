@@ -10,10 +10,20 @@
     transition:background-color 0.05s linear 0s;
 }
 .Header{
+    background-image: url(../assets/images/rickandmorty.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:40vh;
+    width:100%;
     flex-direction: column;
 display: flex;
 align-items: center;
-
+justify-content: center;
+&__title{
+    color: #fff;
+    font-size:3rem;
+}
 }
 
 .dark-mode .Header__button:hover , .dark-mode .Header__button:active{
