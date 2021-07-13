@@ -87,7 +87,7 @@ export default function Characters() {
 
         <div className="container__favorite">
                 
-            {(favorite.allFavorites.length ===0)? <i> Select your favorite character </i>:  <i> :)</i>}
+            {(favorite.allFavorites.length ===0)? <i> Select your favorite character </i>:  <i className="heart" ></i>}
 
             
             {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="container__favorite--characters" src={favoriteCharacter.image} />)}

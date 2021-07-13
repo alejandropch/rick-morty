@@ -31,6 +31,7 @@
       color: #fff;
     }
   }
+
   &__card {
     @extend .container;
     flex-direction:column;
@@ -106,7 +107,11 @@
   }
 
 
-
+.heart{
+  background-image: url(../assets/icons/heart.svg);
+  width: 20px;
+  height: 20px;
+}
 
   @-webkit-keyframes fadeIn {
   0% {opacity: 0;}

@@ -36,10 +36,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  top: 30vh;
 }
 
 .container__search input {
-  width: 200px;
+  min-width: 170px;
+  width: 30vw;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  height: clamp(20px, 5vw, 30px);
+  text-align: center;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  color: #fff;
 }
 
 .container__card {
@@ -124,6 +137,10 @@
   border-radius: 100%;
   width: 50px;
   height: 50px;
+}
+
+.heart {
+  background-image: url(../assets/icons/heart.svg);
 }
 
 @-webkit-keyframes fadeIn {
