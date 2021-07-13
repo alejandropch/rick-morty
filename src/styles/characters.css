@@ -41,7 +41,18 @@
 }
 
 .container__search input {
-  width: 200px;
+  min-width: 170px;
+  width: 30vw;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  height: clamp(20px, 5vw, 30px);
+  text-align: center;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  color: #fff;
 }
 
 .container__card {
