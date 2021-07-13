@@ -1,14 +1,6 @@
 @import "./characters";
 
-.Header__button{
-    min-width:200px;
-    min-height:30px;
-    border-radius: 5px;
-    font-weight: 700;
-    border-width:0px;
-    align-self: flex-end;
-    transition:background-color 0.05s linear 0s;
-}
+
 .Header{
     background-image: url(../assets/images/rickandmorty.jpeg);
     background-position: center;
@@ -27,55 +19,3 @@ justify-content: center;
     text-align: center;
 }
 }
-
-.dark-mode .Header__button:hover , .dark-mode .Header__button:active{
-
-    animation:jump 0.5s ease 0s 1 normal;
-   
-}
-
-
-    .light-mode .Header__button{
-
-  animation:jumpInfinite 0.5s ease 0s infinite normal;
-  animation-delay: 3s;
-  animation-duration: 3s;
-    background-color: #f5ca0b;
-}
-
-.dark-mode .Header__button{
-    
-
-
-    border:solid 2px #7ddf7a;
-    border-top: 0px;
-    background-color:#0daec3;
-    text-shadow:0px 5px 10px #7ddf7a;
-   
-}
-@keyframes jumpInfinite{
-    0%{ transform:translateY(0); }
-    2%,4%{ transform:translateY(-12px); }
-    6%{ transform:translateY(0); }
-    8%{ transform:translateY(-5px); }
-    10%{ transform:translateY(0); }
-
-    }
-    @keyframes jump{
-0%{ transform:translateY(0); }
-20%{ transform:translateY(0); }
-40%{ transform:translateY(-11px); }
-50%{ transform:translateY(0); }
-60%{ transform:translateY(-5px); }
-80%{ transform:translateY(0); }
-100%{ transform:translateY(0); }
-}
-   
-    @keyframes change-light-dark {
-    0%{ background-color: #f5ca0b; }
-    100%{ background-color:#0daec3;}
-    }
-    @keyframes change-dark-light {
-        0%{ background-color:#0daec3;}
-        100%{ background-color: #f5ca0b; }
-        }

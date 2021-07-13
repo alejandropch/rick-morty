@@ -1,6 +1,8 @@
 import React ,{ useState,useReducer,useMemo,useRef, useCallback} from 'react'
 
 import useCharacter from '../hooks/useCharacter'
+import ButtonChange from './ChangeModeButton'
+
 import '../styles/characters.css'
 import Search from './Search'
 
@@ -32,8 +34,7 @@ export default function Characters() {
         allFavorites: []
     }
    
-
-
+   
     const [search, setSearch]=useState('')
     const [favorite,dispatch]=useReducer(reducerCreated,initialState)
     const searchInput=useRef(null)
@@ -71,17 +72,15 @@ export default function Characters() {
         })
     ,[characters,search])
 
-    function hola(){
-        console.log(favorite.allFavorites.length)
-        if(favorite.allFavorites.length===0)console.log("fsdf")
-        else{console.log("no")}
-    }
 
+   
     return ( 
    <React.Fragment>
           
     <div className="container">
-
+   <div className="container__button" > 
+        <ButtonChange />
+        </div>
         <Search handleSearch={handleSearch} searchInput={searchInput} search={search}/>
 
 

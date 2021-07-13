@@ -4,6 +4,39 @@
   flex-direction: column;
   flex-flow:wrap;
   justify-content: center;
+
+
+  .Header__button{
+    min-width:200px;
+    min-height:30px;
+    border-radius: 5px;
+    font-weight: 700;
+    border-width:0px;
+    align-self: flex-end;
+    transition:background-color 0.05s linear 0s;
+    cursor:pointer;
+}
+
+.container__button{
+  width:85vw;
+  display:flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+@media (max-width:1000px){
+  .container__button{
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+*{
+
+    animation: none !important;
+}
+
+}
+
+
   &__cards{
     justify-content: center;
     display: flex;
@@ -88,30 +121,41 @@
   }
 
   &__favorite{
-    position: relative;
+
+    align-items: center;
+
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     min-height:50px;
+    position: relative;
+
     width: 90vw;
-    
      &--characters{
      aspect-ratio: 1;
      border-radius: 100%;
      width:50px;
      height:50px;
     }
+    .heart{
+     aspect-ratio: 1;
+     
+      background-size:contain;
+      background-image: url(../assets/icons/heart.svg);
+      min-width: 25px;
+      min-height: 25px;
+      background-position: center;
+      width: 4vw;;
+      height: 4vh;
+      background-repeat: no-repeat;
+    }
+    
   }
   
   }
 
 
-.heart{
-  background-image: url(../assets/icons/heart.svg);
-  width: 20px;
-  height: 20px;
-}
 
   @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
@@ -121,3 +165,46 @@
   0% {opacity: 0;}
   100% {opacity: 1;}
   } 
+
+  .dark-mode .Header__button{
+
+    animation:jump 0.5s ease 0s 1 normal;
+   
+}
+
+
+    .light-mode .Header__button{
+
+  animation:jumpInfinite 0.5s ease 0s infinite normal;
+  animation-delay: 3s;
+  animation-duration: 3s;
+    background-color: #f5ca0b;
+}
+
+.dark-mode .Header__button{
+    
+
+
+    border:solid 2px #7ddf7a;
+    border-top: 0px;
+    background-color:#0daec3;
+    text-shadow:0px 5px 10px #7ddf7a;
+   
+}
+@keyframes jumpInfinite{
+    0%{ transform:translateY(0); }
+    2%,4%{ transform:translateY(-12px); }
+    6%{ transform:translateY(0); }
+    8%{ transform:translateY(-5px); }
+    10%{ transform:translateY(0); }
+
+    }
+   
+    @keyframes change-light-dark {
+    0%{ background-color: #f5ca0b; }
+    100%{ background-color:#0daec3;}
+    }
+    @keyframes change-dark-light {
+        0%{ background-color:#0daec3;}
+        100%{ background-color: #f5ca0b; }
+        }
