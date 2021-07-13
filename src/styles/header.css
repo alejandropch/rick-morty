@@ -180,7 +180,8 @@
 
 .Header__title {
   color: #fff;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
 }
 
 .dark-mode .Header__button:hover, .dark-mode .Header__button:active {
