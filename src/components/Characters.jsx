@@ -40,8 +40,10 @@ export default function Characters() {
 
    
 
-    function handleClick(favorite){
-        dispatch({type:'FAVORITE_CHARACTER',payLoad:favorite})
+    function handleClick(favoriteCharacter){
+      
+        if(favorite.allFavorites.includes(favoriteCharacter)===false)dispatch({type:'FAVORITE_CHARACTER',payLoad:favoriteCharacter})
+        else return
     }
 
 
