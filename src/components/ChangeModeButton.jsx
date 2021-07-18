@@ -7,7 +7,6 @@ import '../styles/changeModeButton.css'
 
 export default function ChangeModeButton() {
 
-    const color=useContext(ThemeContext)  
 
     const [darkMode,setDarkMode]= useState(false)
     

@@ -38,15 +38,27 @@ export default function Characters() {
     const [search, setSearch]=useState('')
     const [favorite,dispatch]=useReducer(reducerCreated,initialState)
     const searchInput=useRef(null)
-
-   
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    let prevCharacter=''
 
     function handleClick(favoriteCharacter){
       
+    
+
+        //si el personaje que viene no es igual al primero, entonces debe tocar dos veces
+        if(isMobile && prevCharacter!==favoriteCharacter){
+            
+            prevCharacter=favoriteCharacter
+            return
+
+        }
 
         //payload is the character that the user clicked
-        if(favorite.allFavorites.includes(favoriteCharacter)===false)dispatch({type:'FAVORITE_CHARACTER',payLoad:favoriteCharacter})
-        else return
+        if(favorite.allFavorites.includes(favoriteCharacter)===false){
+        
+            dispatch({type:'FAVORITE_CHARACTER',payLoad:favoriteCharacter})
+        }
+        
     }
 
 
@@ -109,7 +121,7 @@ export default function Characters() {
                 
                     </div>
                     <div className="subInfo__img--container">
-                    <img className="subInfo__img"src={ character.image} /> 
+                    <img className="subInfo__img"src={ character.image} alt={character.name+" photo"} /> 
                     </div>
                 </div>
             </div>

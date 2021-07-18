@@ -109,7 +109,7 @@
   z-index: 0;
 }
 
-.container__card--subInfo:hover .subInfo__wall {
+.container__card--subInfo:hover .subInfo__wall, .container__card--subInfo:focus .subInfo__wall {
   -webkit-animation: fadeIn 0.5s both;
           animation: fadeIn 0.5s both;
   display: -webkit-box;

@@ -93,7 +93,7 @@
     
     }
       
-    &--subInfo:hover{
+    &--subInfo:hover, &--subInfo:focus{
       .subInfo__wall{
         animation: fadeIn 0.5s both;
         display:flex;
