@@ -38,12 +38,16 @@ export default function Characters() {
     const [search, setSearch]=useState('')
     const [favorite,dispatch]=useReducer(reducerCreated,initialState)
     const searchInput=useRef(null)
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let prevCharacter=''
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    function handleClick(favoriteCharacter){
-      
+
+        function handleClick(favoriteCharacter){
     
+    // i repeat the same statement if somehow the user change to a mobile device without leaving or refresing the page, by doing this the user experience doesn't get affected
+            isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+         
 
         //si el personaje que viene no es igual al primero, entonces debe tocar dos veces
         if(isMobile && prevCharacter!==favoriteCharacter){
@@ -98,7 +102,10 @@ export default function Characters() {
 
         <div className="container__favorite">
                 
-            {(favorite.allFavorites.length ===0)? <i> Select your favorite character </i>:  <i className="heart" ></i>}
+
+
+
+            {(favorite.allFavorites.length ===0)?(isMobile)? <i> Double tap on your favorite character </i>:<i> Click on your favorite character </i>:  <i className="heart" ></i>}
 
             
             {favorite.allFavorites.map(favoriteCharacter=><img key={favoriteCharacter.id} className="container__favorite--characters" src={favoriteCharacter.image} />)}
