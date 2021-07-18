@@ -43,6 +43,8 @@ export default function Characters() {
 
     function handleClick(favoriteCharacter){
       
+
+        //payload is the character that the user clicked
         if(favorite.allFavorites.includes(favoriteCharacter)===false)dispatch({type:'FAVORITE_CHARACTER',payLoad:favoriteCharacter})
         else return
     }

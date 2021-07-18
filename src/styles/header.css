@@ -13,18 +13,6 @@
           justify-content: center;
 }
 
-.container .Header__button, .container__card .Header__button {
-  min-width: 200px;
-  min-height: 30px;
-  border-radius: 5px;
-  font-weight: 700;
-  border-width: 0px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-transition: background-color 0.05s linear 0s;
-  transition: background-color 0.05s linear 0s;
-}
-
 .container__cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
