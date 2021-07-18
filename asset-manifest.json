@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rickandmorty/static/css/main.428e3ef8.chunk.css",
+    "main.css": "/rickandmorty/static/css/main.51529172.chunk.css",
     "main.js": "/rickandmorty/static/js/main.595c7b6a.chunk.js",
     "main.js.map": "/rickandmorty/static/js/main.595c7b6a.chunk.js.map",
     "runtime-main.js": "/rickandmorty/static/js/runtime-main.269d3560.js",
@@ -8,7 +8,7 @@
     "static/js/2.eb217950.chunk.js": "/rickandmorty/static/js/2.eb217950.chunk.js",
     "static/js/2.eb217950.chunk.js.map": "/rickandmorty/static/js/2.eb217950.chunk.js.map",
     "index.html": "/rickandmorty/index.html",
-    "static/css/main.428e3ef8.chunk.css.map": "/rickandmorty/static/css/main.428e3ef8.chunk.css.map",
+    "static/css/main.51529172.chunk.css.map": "/rickandmorty/static/css/main.51529172.chunk.css.map",
     "static/js/2.eb217950.chunk.js.LICENSE.txt": "/rickandmorty/static/js/2.eb217950.chunk.js.LICENSE.txt",
     "static/media/characters.css": "/rickandmorty/static/media/loupe.0f22a7ce.svg",
     "static/media/header.css": "/rickandmorty/static/media/rickandmorty.4325dcfc.jpeg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.269d3560.js",
     "static/js/2.eb217950.chunk.js",
-    "static/css/main.428e3ef8.chunk.css",
+    "static/css/main.51529172.chunk.css",
     "static/js/main.595c7b6a.chunk.js"
   ]
 }
