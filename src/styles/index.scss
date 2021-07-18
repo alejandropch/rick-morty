@@ -44,3 +44,23 @@ body {
   height:100%;
   min-height:100vh;
 } 
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #292929;
+  }
+
+  ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  background:#d9dada; 
+  border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+  background:rgb(187, 187, 187); 
+
+} 
