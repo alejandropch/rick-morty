@@ -25,7 +25,7 @@ export default function ChangeModeButton() {
     return (
    <div className="container__button" > 
 
-             <button className={updateMode+" Header__button"} type="button" onClick={handleClickStateMode}>{darkMode? "Boring Light Mode":"Dark Mode Baby"}</button>
+             <button className={updateMode+" Header__button"} type="button" onClick={handleClickStateMode}>{darkMode? "Dark Mode Baby":"Boring Light Mode"}</button>
         </div>
 
     )
